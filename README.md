@@ -8,9 +8,12 @@
 ## Single node architecture
 | ![Single Node](./assets/cpuArchitecture.png) |
 |:--:|
-| A view of what the internals of a CPU node might look like, taken from *https://core.vmware.com/resource/exploring-gpu-architecture*. Note the shared memory via RAM. |
+| A view of what the internals of a CPU node might look like, taken from *https://core.vmware.com/resource/exploring-gpu-architecture*. Note the shared memory via LLC cache and RAM. |
 
 ## Multi-node
 | ![Multi Node](./assets/multiNodeCommunication.png) |
 |:--:|
 | Diagram illustrating each node is self-contained, and communicates via IO to (slower) shared memory far from the nodes. |
+
+## Monte-Carlo over Neural Network Trainings
+To illustrate SPMD at a few levels, we show how one could deploy Monte-Carlo (utilizing independence of computation nodes) to train a family of identical architecture (but independently initialized) neural networks, which are then trained utilizing parallelization at the node level.
