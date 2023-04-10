@@ -5,6 +5,12 @@
 |:--:|
 | A sketch of a single compute job distributing over multiple nodes, each with multiple CPUs onboard. We emphasize that while inter-cpu communication on a single node is much faster than inter-node communication, there are more failure modes. |
 
+## Single node architecture
 | ![Single Node](./assets/cpuArchitecture.png) |
 |:--:|
-| *https://core.vmware.com/resource/exploring-gpu-architecture* |
+| A view of what the internals of a CPU node might look like, taken from *https://core.vmware.com/resource/exploring-gpu-architecture*. Note the shared memory via RAM. |
+
+## Multi-node
+| ![Multi Node](./assets/multiNodeCommunication.png) |
+|:--:|
+| Diagram illustrating each node is self-contained, and communicates via IO to (slower) shared memory far from the nodes. |
