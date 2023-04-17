@@ -7,8 +7,6 @@
 ### SLURM reads %x as the job name and %j as the job ID
 #SBATCH --output=%x.out
 #SBATCH --account=${ACCOUNT}
-#SBATCH --mail-type=ALL
-#SBATCH --mail-user=${USER}@math.arizona.edu
 #SBATCH --partition=standard
 #SBATCH --ntasks=6
 #SBATCH --nodes=1
@@ -21,7 +19,7 @@
 # --------------------------------------------------------------
 ### Load required modules/libraries if needed
 module load julia
-PROJECT_PATH=${HOME}/SPMD/julia/
+PROJECT_PATH=${HOME}/SPMD/src/julia/
 OUTPUT_PATH=${PROJECT_PATH}/results/${SLURM_ARRAY_TASK_ID}/
 MAX_EPOCHS=500
 julia --project=${PROJECT_PATH} ${PROJECT_PATH}/runScript.jl ${OUTPUT_PATH} ${MAX_EPOCHS}

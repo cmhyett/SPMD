@@ -30,7 +30,6 @@ function main(outputPath, maxEpochs)
 
     data = [(x_train, y_train)];
     opt = Flux.setup(ADAM(), model);
-    maxEpochs = 1000;
     lossArray = zeros(maxEpochs);
 
     for epoch in 1:maxEpochs
@@ -41,5 +40,6 @@ function main(outputPath, maxEpochs)
         end
     end
 
-    serialize(lossArray, outputPath * "/lossArray.jls");
+    mkpath(outputPath);
+    serialize(outputPath * "/lossArray.jls", lossArray);
 end
