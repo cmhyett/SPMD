@@ -3,7 +3,7 @@
 
 | ![Single Program Many Data Schematics](./assets/SPMDSchematic.png) |
 |:--:|
-| A sketch of a single compute job distributing over multiple nodes, each with multiple CPUs onboard. We emphasize that while inter-cpu communication on a single node is much faster than inter-node communication, there are more failure modes. For schematic latency numbers, see ![Single Program Many Data Schematics](https://gist.github.com/jboner/2841832)|
+| A sketch of a single compute job distributing over multiple nodes, each with multiple CPUs onboard. We emphasize that while inter-cpu communication on a single node is much faster than inter-node communication, there are more failure modes. For schematic latency numbers, see [latency numbers](https://gist.github.com/jboner/2841832)|
 
 ## Single node architecture
 | ![Single Node](./assets/cpuArchitecture.png) |
