@@ -41,5 +41,5 @@ function main(outputPath, maxEpochs)
         end
     end
 
-    serialize(lossArray, outputPath);
+    serialize(lossArray, outputPath * "/lossArray.jls");
 end
